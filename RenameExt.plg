@@ -1,0 +1,53 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: RenameExt - Win32 Unicode Release MinDependency--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Pupon\LOCALS~1\Temp\RSP29C.tmp" with contents
+[
+/nologo /MT /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_USRDLL" /D "_UNICODE" /D "_ATL_STATIC_REGISTRY" /Fo"ReleaseUMinDependency/" /Fd"ReleaseUMinDependency/" /FD /c 
+"C:\My Projects\RenameExt\RenameExt.cpp"
+"C:\My Projects\RenameExt\RenameExtImpl.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Pupon\LOCALS~1\Temp\RSP29C.tmp" 
+Creating temporary file "C:\DOCUME~1\Pupon\LOCALS~1\Temp\RSP29D.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib shlwapi.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"ReleaseUMinDependency/RenameExt.pdb" /machine:I386 /def:".\RenameExt.def" /out:"ReleaseUMinDependency/RenameExt.dll" /implib:"ReleaseUMinDependency/RenameExt.lib" 
+".\ReleaseUMinDependency\RenameExt.obj"
+".\ReleaseUMinDependency\RenameExtImpl.obj"
+".\ReleaseUMinDependency\StdAfx.obj"
+".\ReleaseUMinDependency\RenameExt.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\Pupon\LOCALS~1\Temp\RSP29D.tmp"
+Creating temporary file "C:\DOCUME~1\Pupon\LOCALS~1\Temp\RSP29E.bat" with contents
+[
+@echo off
+if "%OS%"=="" goto NOTNT
+if not "%OS%"=="Windows_NT" goto NOTNT
+regsvr32 /s /c ".\ReleaseUMinDependency\RenameExt.dll"
+echo regsvr32 exec. time > ".\ReleaseUMinDependency\regsvr32.trg"
+goto end
+:NOTNT
+echo Warning : Cannot register Unicode DLL on Windows 95
+:end
+]
+Creating command line "C:\DOCUME~1\Pupon\LOCALS~1\Temp\RSP29E.bat"
+Compiling...
+RenameExt.cpp
+RenameExtImpl.cpp
+Generating Code...
+Linking...
+   Creating library ReleaseUMinDependency/RenameExt.lib and object ReleaseUMinDependency/RenameExt.exp
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+RenameExt.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

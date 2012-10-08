@@ -1,0 +1,38 @@
+// RenameExt.idl : IDL source for RenameExt.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (RenameExt.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(A6CCD6F0-D247-4E22-AF37-245016EB0F3F),
+		dual,
+		helpstring("IRenameExtImpl Interface"),
+		pointer_default(unique)
+	]
+	interface IRenameExtImpl : IDispatch
+	{
+	};
+
+[
+	uuid(ABB049D1-A4A0-4BCB-A634-51975FD21F98),
+	version(1.0),
+	helpstring("RenameExt 1.0 Type Library")
+]
+library RENAMEEXTLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(C24483D3-1FC8-4F3B-86CD-6C9133A0B165),
+		helpstring("RenameExtImpl Class")
+	]
+	coclass RenameExtImpl
+	{
+		[default] interface IRenameExtImpl;
+	};
+};

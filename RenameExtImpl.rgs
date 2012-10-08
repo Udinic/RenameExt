@@ -1,0 +1,26 @@
+HKCR
+{
+	RenameExt.RenameExtImpl.1 = s 'RenameExtImpl Class'
+	{
+		CLSID = s '{C24483D3-1FC8-4F3B-86CD-6C9133A0B165}'
+	}
+	RenameExt.RenameExtImpl = s 'RenameExtImpl Class'
+	{
+		CLSID = s '{C24483D3-1FC8-4F3B-86CD-6C9133A0B165}'
+		CurVer = s 'RenameExt.RenameExtImpl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C24483D3-1FC8-4F3B-86CD-6C9133A0B165} = s 'RenameExtImpl Class'
+		{
+			ProgID = s 'RenameExt.RenameExtImpl.1'
+			VersionIndependentProgID = s 'RenameExt.RenameExtImpl'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{ABB049D1-A4A0-4BCB-A634-51975FD21F98}'
+		}
+	}
+}
